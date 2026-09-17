@@ -25,6 +25,17 @@ Each folder is self-contained and has the same three pages:
 - `post.html` — a sample article with the full typographic scale
 - `style.css`, `theme.js`
 
+## The switcher
+
+Every design page loads `switcher.js`, which injects a floating bar at the bottom of the
+screen: the left half jumps between the three concepts **keeping the page you are on**
+(so you can compare the same article three ways), the right half moves between home,
+archive and article within the current concept. It adapts to light and dark, collapses to
+`01 / 02 / 03` on phones, and can be dismissed with the `×` (remembered for the tab).
+
+It is preview scaffolding, not part of any design — delete `switcher.js` and the single
+`<script src="../../switcher.js" defer>` tag in each page once you pick a direction.
+
 ## Shared decisions
 
 **Light and dark.** Every concept defines its palette as custom properties on `:root`,
