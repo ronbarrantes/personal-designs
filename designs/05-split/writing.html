@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Writing — Ron Barrantes</title>
+<meta name="description" content="Design concept 05: Split." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="split">
+  <header class="panel">
+    <div class="id">
+      <a class="name" href="index.html">Ron Barrantes</a>
+      <p>Software engineer.<br />San Antonio, Texas.</p>
+    </div>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Index<span class="mark">●</span></a></li>
+        <li><a href="writing.html" aria-current="page">Writing<span class="mark">●</span></a></li>
+        <li><a href="index.html#about">About<span class="mark">●</span></a></li>
+        <li><a href="#">Projects<span class="mark">●</span></a></li>
+      </ul>
+    </nav>
+
+    <p class="note">24 essays, 2021&ndash;2026. Longest first draft: eleven months.</p>
+
+    <div class="bottom">
+      <div class="links">
+        <a href="#">GitHub</a><a href="#">Mastodon</a><a href="#">RSS</a><a href="mailto:hello@ronb.co">Email</a>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="stream" id="main">
+    <div class="stream-head">
+      <span class="mono">Archive</span>
+      <h2>Writing</h2>
+      <p>Newest first. Nothing here is a hot take; most of it sat for a month before it went up.</p>
+    </div>
+
+    <section class="group" aria-labelledby="y26">
+      <span class="mono" id="y26">2026</span>
+      <ul class="rows">
+        <li><a href="post.html"><span class="t">The quiet cost of clever abstractions</span><span class="d">08·14</span><span class="s">Every indirection is a tax someone pays at 2am.</span></a></li>
+        <li><a href="post.html"><span class="t">Designing for the second read</span><span class="d">07·02</span><span class="s">Optimising code for the reader instead of the author.</span></a></li>
+        <li><a href="post.html"><span class="t">A year of typed everything</span><span class="d">05·19</span><span class="s">Where strict types earn their keep, and where they don&rsquo;t.</span></a></li>
+        <li><a href="post.html"><span class="t">Notes on running a team of two</span><span class="d">02·08</span><span class="s">The smallest org chart still has politics.</span></a></li>
+      </ul>
+    </section>
+
+    <section class="group" aria-labelledby="y25">
+      <span class="mono" id="y25">2025</span>
+      <ul class="rows">
+        <li><a href="post.html"><span class="t">Why I stopped mocking the database</span><span class="d">11·30</span><span class="s">Test doubles promised speed and delivered a second implementation.</span></a></li>
+        <li><a href="post.html"><span class="t">The empty state is the product</span><span class="d">09·12</span><span class="s">Nobody designs the first screen a new user sees.</span></a></li>
+        <li><a href="post.html"><span class="t">Six months without a staging environment</span><span class="d">04·21</span><span class="s">What broke, what didn&rsquo;t, and what I&rsquo;d keep.</span></a></li>
+      </ul>
+    </section>
+  </main>
+</div>
+<script src="../../switcher.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ron Barrantes — Workbench</title>
+<meta name="description" content="Design concept 07: Workbench." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">ronb.co</a>
+    <span class="sep" aria-hidden="true">/</span>
+    <span class="here">Overview</span>
+  </nav>
+  <div class="right">
+    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+      <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+    </button>
+  </div>
+</header>
+
+<div class="frame">
+  <nav class="rail" aria-label="Primary">
+    <div class="who">
+      <a class="name" href="index.html">Ron Barrantes</a>
+      <p>Software engineer<br />San Antonio, TX</p>
+    </div>
+
+    <div class="group">
+      <span class="mono">Site</span>
+      <ul>
+        <li><a href="index.html" aria-current="page">Overview</a></li>
+        <li><a href="writing.html">Writing<span class="count">24</span></a></li>
+        <li><a href="#">Projects<span class="count">7</span></a></li>
+        <li><a href="index.html#about">About</a></li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <span class="mono">Topics</span>
+      <ul>
+        <li><a href="#">Engineering<span class="count">9</span></a></li>
+        <li><a href="#">Craft<span class="count">6</span></a></li>
+        <li><a href="#">Testing<span class="count">5</span></a></li>
+        <li><a href="#">Teams<span class="count">4</span></a></li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <span class="mono">Elsewhere</span>
+      <ul>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Mastodon</a></li>
+        <li><a href="#">RSS</a></li>
+        <li><a href="mailto:hello@ronb.co">Email</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="pane" id="main">
+    <div class="pane-head">
+      <span class="mono">Overview</span>
+      <h1>I write software for a living, and essays about it for everything else.</h1>
+      <p>A decade of web applications, most of it spent maintaining things long after the
+        launch. Interfaces, type systems, testing, and the small decisions that decide
+        whether a codebase is pleasant to live in.</p>
+    </div>
+
+    <div class="group-head">
+      <span class="mono">Recent writing</span>
+      <a class="mono" href="writing.html" style="text-decoration: none; color: var(--accent);">All 24 →</a>
+    </div>
+    <ul class="list">
+      <li><a href="post.html"><span class="t">The quiet cost of clever abstractions</span><span class="d">2026·08·14</span><span class="r">12 min</span><span class="s">Every indirection is a tax someone pays at 2am.</span></a></li>
+      <li><a href="post.html"><span class="t">Designing for the second read</span><span class="d">2026·07·02</span><span class="r">8 min</span><span class="s">Optimising code for the reader instead of the author.</span></a></li>
+      <li><a href="post.html"><span class="t">A year of typed everything</span><span class="d">2026·05·19</span><span class="r">15 min</span><span class="s">Where strict types earn their keep, and where they don&rsquo;t.</span></a></li>
+      <li><a href="post.html"><span class="t">Notes on running a team of two</span><span class="d">2026·02·08</span><span class="r">6 min</span><span class="s">The smallest org chart still has politics.</span></a></li>
+    </ul>
+
+    <div class="group-head"><span class="mono" id="about">About</span></div>
+    <p style="color: var(--text-soft); max-width: 60ch;">
+      I care a little too much about the seams: error messages, empty states, the shape of a
+      function signature. If something here is useful, wrong, or both, I&rsquo;d like to hear
+      about it — <a href="mailto:hello@ronb.co">hello@ronb.co</a>.
+    </p>
+  </main>
+
+  <aside class="toc" aria-label="Page details">
+    <span class="mono">Status</span>
+    <p class="aside">Currently building developer tools. Open to interesting problems,
+      not looking to move.</p>
+    <span class="mono">Now</span>
+    <p class="aside">Reading about incremental compilers. Rewriting the invoicing service.
+      Learning to solder, badly.</p>
+  </aside>
+</div>
+<script src="../../switcher.js" defer></script>
+</body>
+</html>

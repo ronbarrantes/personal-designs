@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ron Barrantes — Split</title>
+<meta name="description" content="Design concept 05: Split." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="split">
+  <header class="panel">
+    <div class="id">
+      <h1 class="name">Ron Barrantes</h1>
+      <p>Software engineer.<br />San Antonio, Texas.</p>
+    </div>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Index<span class="mark">●</span></a></li>
+        <li><a href="writing.html">Writing<span class="mark">●</span></a></li>
+        <li><a href="index.html#about">About<span class="mark">●</span></a></li>
+        <li><a href="#">Projects<span class="mark">●</span></a></li>
+      </ul>
+    </nav>
+
+    <p class="note">Currently building developer tools, and writing about the parts of the job that don&rsquo;t fit in a changelog.</p>
+
+    <div class="bottom">
+      <div class="links">
+        <a href="#">GitHub</a><a href="#">Mastodon</a><a href="#">RSS</a><a href="mailto:hello@ronb.co">Email</a>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="stream" id="main">
+    <div class="stream-head">
+      <span class="mono">Index — 2026</span>
+      <h2>I write software for a living and essays about it for <span class="accent">everything else</span>.</h2>
+      <p>A decade of web applications, most of it spent maintaining things long after the launch.</p>
+    </div>
+
+    <section class="group" aria-labelledby="recent">
+      <span class="mono" id="recent">Recent writing</span>
+      <ul class="rows">
+        <li><a href="post.html"><span class="t">The quiet cost of clever abstractions</span><span class="d">2026·08</span><span class="s">Every indirection is a tax someone pays at 2am.</span></a></li>
+        <li><a href="post.html"><span class="t">Designing for the second read</span><span class="d">2026·07</span><span class="s">Optimising code for the reader instead of the author.</span></a></li>
+        <li><a href="post.html"><span class="t">A year of typed everything</span><span class="d">2026·05</span><span class="s">Where strict types earn their keep, and where they don&rsquo;t.</span></a></li>
+        <li><a href="post.html"><span class="t">Notes on running a team of two</span><span class="d">2026·02</span><span class="s">The smallest org chart still has politics.</span></a></li>
+      </ul>
+    </section>
+
+    <section class="group" id="about" aria-labelledby="about-h">
+      <span class="mono" id="about-h">About</span>
+      <p style="color: var(--text-soft); max-width: 46ch;">
+        I care a little too much about the seams: error messages, empty states, the shape of a
+        function signature. If something here is useful, wrong, or both, I&rsquo;d like to hear
+        about it — <a href="mailto:hello@ronb.co">hello@ronb.co</a>.
+      </p>
+    </section>
+  </main>
+</div>
+<script src="../../switcher.js" defer></script>
+</body>
+</html>

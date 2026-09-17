@@ -7,9 +7,11 @@
    ============================================================ */
 (function () {
   var DESIGNS = [
-    { slug: "01-quiet-editorial", num: "01", name: "Quiet Editorial" },
-    { slug: "02-soft-horizon",    num: "02", name: "Soft Horizon" },
-    { slug: "03-index-archive",   num: "03", name: "Index & Archive" }
+    { slug: "03-index-archive", num: "03", name: "Index" },
+    { slug: "04-ledger",        num: "04", name: "Ledger" },
+    { slug: "05-split",         num: "05", name: "Split" },
+    { slug: "06-broadsheet",    num: "06", name: "Broadsheet" },
+    { slug: "07-workbench",     num: "07", name: "Workbench" }
   ];
   var PAGES = [
     { file: "index.html",   name: "Home" },

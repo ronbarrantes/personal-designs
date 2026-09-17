@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The quiet cost of clever abstractions — Ron Barrantes</title>
+<meta name="description" content="Design concept 07: Workbench — article view with a contents pane that tracks the section you are reading." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">ronb.co</a>
+    <span class="sep" aria-hidden="true">/</span>
+    <a href="writing.html">Writing</a>
+    <span class="sep" aria-hidden="true">/</span>
+    <span class="here">The quiet cost of clever abstractions</span>
+  </nav>
+  <div class="right">
+    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+      <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+    </button>
+  </div>
+</header>
+
+<div class="frame">
+  <nav class="rail" aria-label="Primary">
+    <div class="who">
+      <a class="name" href="index.html">Ron Barrantes</a>
+      <p>Software engineer<br />San Antonio, TX</p>
+    </div>
+    <div class="group">
+      <span class="mono">Site</span>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="writing.html" aria-current="page">Writing<span class="count">24</span></a></li>
+        <li><a href="#">Projects<span class="count">7</span></a></li>
+        <li><a href="index.html#about">About</a></li>
+      </ul>
+    </div>
+    <div class="group">
+      <span class="mono">Topics</span>
+      <ul>
+        <li><a href="#">Engineering<span class="count">9</span></a></li>
+        <li><a href="#">Craft<span class="count">6</span></a></li>
+        <li><a href="#">Testing<span class="count">5</span></a></li>
+        <li><a href="#">Teams<span class="count">4</span></a></li>
+      </ul>
+    </div>
+    <div class="group">
+      <span class="mono">Elsewhere</span>
+      <ul>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Mastodon</a></li>
+        <li><a href="#">RSS</a></li>
+        <li><a href="mailto:hello@ronb.co">Email</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="pane" id="main">
+    <article class="doc">
+      <span class="mono">Engineering · 2026·08·14 · 12 min</span>
+      <h1>The quiet cost of clever abstractions</h1>
+      <p class="dek">Every indirection you add is a tax someone pays at 2am. A short case for
+        writing the boring version first, and waiting for the third example.</p>
+      <hr class="rule" />
+
+      <div class="prose">
+        <p>
+          There is a particular kind of pull request that feels wonderful to write and
+          terrible to inherit. It collapses six similar functions into one configurable
+          engine. It removes ninety lines. The diff is green in all the right places, and
+          every reviewer leaves a small celebratory emoji.
+        </p>
+        <p>
+          Eighteen months later, someone is reading that engine at two in the morning, trying
+          to work out why a single customer&rsquo;s invoice renders with the wrong currency,
+          and the answer lives four layers down in a branch that only fires when two
+          configuration flags disagree.
+        </p>
+
+        <h2 id="shape">Duplication is cheaper than the wrong shape</h2>
+        <p>
+          The instinct to remove repetition is a good one, and it is also the most commonly
+          misapplied rule in our field. Repetition is visible; the wrong abstraction is
+          invisible until it fails. When you merge two things that merely <em>look</em> alike,
+          you have not removed complexity — you have hidden the fact that they were never the
+          same thing.
+        </p>
+        <blockquote>
+          Prefer duplication over the wrong abstraction. It is far easier to fan a function
+          back out than to untangle one that grew a personality.
+        </blockquote>
+        <p>
+          My working rule is to wait for the third occurrence, and then to look at the
+          <strong>reasons</strong> rather than the shapes. Two pieces of code that change for
+          the same reason belong together. Two that happen to share five lines today do not.
+        </p>
+
+        <h2 id="test">A test you can run in your head</h2>
+        <p>
+          Before extracting anything, I answer one question out loud: if the requirement
+          changed for exactly one caller, how much of this would I have to undo? If the honest
+          answer involves a new boolean parameter, the abstraction is already failing, and it
+          has not even shipped yet.
+        </p>
+        <pre><code>// The boring version. It fits on a screen.
+function invoiceTotal(lines, taxRate) {
+  const subtotal = lines.reduce((sum, l) =&gt; sum + l.amount, 0);
+  return subtotal + subtotal * taxRate;
+}</code></pre>
+        <p>
+          Boring code has a useful property: you can hold all of it in your head at once,
+          which is the only kind of verification that actually happens during an incident.
+        </p>
+
+        <h2 id="instead">What to do instead</h2>
+        <ul>
+          <li>Write the direct version first, even if it repeats.</li>
+          <li>Name the reason two things are the same, not the syntax.</li>
+          <li>Let the third example tell you the real shape.</li>
+          <li>When you do abstract, leave the seams easy to cut again.</li>
+        </ul>
+        <p>
+          None of this is an argument for sloppiness. It is an argument for paying the cost of
+          an abstraction only once you know what you are buying — and for remembering that the
+          person who pays it is usually not the person who wrote it.
+        </p>
+
+        <h2 id="notes">Notes and replies</h2>
+        <p>
+          Written after a long week with an invoice renderer. If you have a counter-example
+          where the early abstraction paid off, I would genuinely like to read it —
+          <a href="mailto:hello@ronb.co">hello@ronb.co</a>.
+        </p>
+      </div>
+
+      <nav class="pager" aria-label="More posts">
+        <a href="writing.html">← All entries</a>
+        <a href="post.html">Designing for the second read →</a>
+      </nav>
+    </article>
+  </main>
+
+  <aside class="toc" aria-label="On this page">
+    <span class="mono">On this page</span>
+    <ol id="toc-list">
+      <li><a href="#shape">Duplication is cheaper than the wrong shape</a></li>
+      <li><a href="#test">A test you can run in your head</a></li>
+      <li><a href="#instead">What to do instead</a></li>
+      <li><a href="#notes">Notes and replies</a></li>
+    </ol>
+    <span class="mono" style="display:block; margin-top:1.25rem;">Details</span>
+    <p class="aside">Published 14 Aug 2026. Revised twice since. Filed under Engineering,
+      invoicing, code review.</p>
+  </aside>
+</div>
+
+<script>
+  /* Highlight the contents entry for the section currently under the top bar. */
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll("#toc-list a"));
+    if (!links.length) return;
+    var targets = links.map(function (a) {
+      return document.getElementById(a.getAttribute("href").slice(1));
+    });
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var offset = parseFloat(getComputedStyle(document.documentElement).fontSize) * 4;
+      var active = -1; /* nothing marked until the first heading passes the bar */
+      for (var i = 0; i < targets.length; i++) {
+        if (targets[i] && targets[i].getBoundingClientRect().top <= offset) active = i;
+      }
+      links.forEach(function (a, i) {
+        if (i === active) { a.setAttribute("aria-current", "true"); }
+        else { a.removeAttribute("aria-current"); }
+      });
+    }
+
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  })();
+</script>
+<script src="../../switcher.js" defer></script>
+</body>
+</html>

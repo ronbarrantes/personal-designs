@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ron Barrantes — Broadsheet</title>
+<meta name="description" content="Design concept 06: Broadsheet." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;550;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="page">
+  <header>
+    <div class="nameplate">
+      <a class="title" href="index.html">Ron Barrantes</a>
+      <span class="edition">No. 24 · August 2026</span>
+    </div>
+    <nav class="subnav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Front</a>
+      <a href="writing.html">Writing</a>
+      <a href="index.html#about">About</a>
+      <a href="#">Projects</a>
+      <a href="#">RSS</a>
+      <span class="spacer"></span>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="grid">
+      <section class="lead" aria-labelledby="lead-h">
+        <span class="kicker">Lead — Engineering</span>
+        <h2 id="lead-h"><a href="post.html">The quiet cost of clever abstractions</a></h2>
+        <p class="standfirst">Every indirection you add is a tax someone pays at 2am. A short
+          case for writing the boring version first, and waiting for the third example before
+          you go looking for a pattern.</p>
+        <p class="byline">14 August 2026 — 12 minute read</p>
+      </section>
+
+      <section class="aside-col" aria-labelledby="also">
+        <span class="kicker quiet" id="also">Also this year</span>
+        <ul class="shorts">
+          <li>
+            <h3><a href="post.html">Designing for the second read</a></h3>
+            <p>Most code is read far more often than it is written.</p>
+            <time datetime="2026-07-02">2 Jul</time>
+          </li>
+          <li>
+            <h3><a href="post.html">A year of typed everything</a></h3>
+            <p>Where strict types earn their keep, and where they don&rsquo;t.</p>
+            <time datetime="2026-05-19">19 May</time>
+          </li>
+          <li>
+            <h3><a href="post.html">Notes on running a team of two</a></h3>
+            <p>The smallest org chart still has politics.</p>
+            <time datetime="2026-02-08">8 Feb</time>
+          </li>
+        </ul>
+      </section>
+
+      <div class="rule-row"></div>
+
+      <section class="run" aria-labelledby="archive-h">
+        <div class="run-head">
+          <span class="kicker quiet" id="archive-h">From the archive</span>
+          <a class="kicker quiet" href="writing.html" style="text-decoration: none;">All 24 →</a>
+        </div>
+        <ul class="entries">
+          <li><a href="post.html"><span class="d">2025·11·30</span><span class="t">Why I stopped mocking the database</span><span class="s">Test doubles promised speed and delivered a second implementation.</span><span class="r">9 min</span></a></li>
+          <li><a href="post.html"><span class="d">2025·09·12</span><span class="t">The empty state is the product</span><span class="s">Nobody designs the first screen a new user sees. It shows.</span><span class="r">5 min</span></a></li>
+          <li><a href="post.html"><span class="d">2025·04·21</span><span class="t">Six months without a staging environment</span><span class="s">What broke, what didn&rsquo;t, and what I&rsquo;d keep.</span><span class="r">7 min</span></a></li>
+          <li><a href="post.html"><span class="d">2024·12·02</span><span class="t">Error messages are documentation</span><span class="s">The only docs everyone reads are the ones printed at 2am.</span><span class="r">6 min</span></a></li>
+        </ul>
+      </section>
+
+      <div class="rule-row"></div>
+
+      <section class="lead" id="about" aria-labelledby="about-h" style="padding-bottom: 2rem;">
+        <span class="kicker quiet" id="about-h">About</span>
+        <p class="standfirst">I&rsquo;m a software engineer in San Antonio. A decade of web
+          applications, most of it spent maintaining things long after the launch party ended.
+          I care a little too much about the seams — error messages, empty states, the shape of
+          a function signature.</p>
+        <p class="byline"><a href="mailto:hello@ronb.co">hello@ronb.co</a></p>
+      </section>
+    </div>
+    <footer class="colophon">
+      <span>&copy; 2026 Ron Barrantes — San Antonio, Texas</span>
+      <nav aria-label="Elsewhere">
+        <a href="#">GitHub</a><a href="#">Mastodon</a><a href="#">RSS</a><a href="mailto:hello@ronb.co">Email</a>
+      </nav>
+    </footer>
+  </main>
+</div>
+<script src="../../switcher.js" defer></script>
+</body>
+</html>

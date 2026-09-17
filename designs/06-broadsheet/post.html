@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The quiet cost of clever abstractions — Ron Barrantes</title>
+<meta name="description" content="Design concept 06: Broadsheet — article view." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;550;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="page">
+  <header>
+    <div class="nameplate">
+      <a class="title" href="index.html">Ron Barrantes</a>
+      <span class="edition">Engineering · 14 August 2026</span>
+    </div>
+    <nav class="subnav" aria-label="Primary">
+      <a href="index.html">Front</a>
+      <a href="writing.html" aria-current="page">Writing</a>
+      <a href="index.html#about">About</a>
+      <a href="#">Projects</a>
+      <a href="#">RSS</a>
+      <span class="spacer"></span>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article class="grid">
+      <header class="masthead-art">
+        <span class="kicker">Engineering</span>
+        <h2>The quiet cost of clever abstractions</h2>
+        <p class="standfirst">Every indirection you add is a tax someone pays at 2am. A short
+          case for writing the boring version first, and waiting for the third example before
+          you go looking for a pattern.</p>
+        <p class="byline"><time datetime="2026-08-14">14 August 2026</time> — 12 minute read — revised twice</p>
+      </header>
+
+      <div class="rule-row"></div>
+
+      <div class="body-col">
+        <div class="prose">
+          <p>
+            There is a particular kind of pull request that feels wonderful to write and
+            terrible to inherit. It collapses six similar functions into one configurable
+            engine. It removes ninety lines. The diff is green in all the right places, and
+            every reviewer leaves a small celebratory emoji.
+          </p>
+          <p>
+            Eighteen months later, someone is reading that engine at two in the morning,
+            trying to work out why a single customer&rsquo;s invoice renders with the wrong
+            currency, and the answer lives four layers down in a branch that only fires when
+            two configuration flags disagree.
+          </p>
+
+          <h3>Duplication is cheaper than the wrong shape</h3>
+          <p>
+            The instinct to remove repetition is a good one, and it is also the most commonly
+            misapplied rule in our field. Repetition is visible; the wrong abstraction is
+            invisible until it fails. When you merge two things that merely <em>look</em>
+            alike, you have not removed complexity — you have hidden the fact that they were
+            never the same thing.
+          </p>
+          <blockquote>
+            Prefer duplication over the wrong abstraction. It is far easier to fan a function
+            back out than to untangle one that grew a personality.
+          </blockquote>
+          <p>
+            My working rule is to wait for the third occurrence, and then to look at the
+            <strong>reasons</strong> rather than the shapes. Two pieces of code that change
+            for the same reason belong together. Two that happen to share five lines today do
+            not.
+          </p>
+
+          <h3>A test you can run in your head</h3>
+          <p>
+            Before extracting anything, I answer one question out loud: if the requirement
+            changed for exactly one caller, how much of this would I have to undo? If the
+            honest answer involves a new boolean parameter, the abstraction is already
+            failing, and it has not even shipped yet.
+          </p>
+          <pre><code>// The boring version. It fits on a screen.
+function invoiceTotal(lines, taxRate) {
+  const subtotal = lines.reduce((sum, l) =&gt; sum + l.amount, 0);
+  return subtotal + subtotal * taxRate;
+}</code></pre>
+
+          <h3>What to do instead</h3>
+          <ul>
+            <li>Write the direct version first, even if it repeats.</li>
+            <li>Name the reason two things are the same, not the syntax.</li>
+            <li>Let the third example tell you the real shape.</li>
+            <li>When you do abstract, leave the seams easy to cut again.</li>
+          </ul>
+          <p>
+            None of this is an argument for sloppiness. It is an argument for paying the cost
+            of an abstraction only once you know what you are buying — and for remembering
+            that the person who pays it is usually not the person who wrote it.
+          </p>
+        </div>
+      </div>
+
+      <aside class="margin-col" aria-label="Notes">
+        <div class="sticky">
+          <p class="pull">The six duplicated functions would have been six greppable places to look.</p>
+          <p class="note"><strong>Filed:</strong> Engineering, invoicing, code review.</p>
+          <p class="note">Written after a long week with an invoice renderer. Replies welcome
+            at <a href="mailto:hello@ronb.co">hello@ronb.co</a>.</p>
+          <p class="note"><a href="post.html">Next — Designing for the second read</a></p>
+        </div>
+      </aside>
+
+      <nav class="pager" aria-label="More posts">
+        <a href="writing.html">← Archive</a>
+        <a href="post.html">Designing for the second read →</a>
+      </nav>
+    </article>
+
+    <footer class="colophon">
+      <span>&copy; 2026 Ron Barrantes — San Antonio, Texas</span>
+      <nav aria-label="Elsewhere">
+        <a href="#">GitHub</a><a href="#">Mastodon</a><a href="#">RSS</a><a href="mailto:hello@ronb.co">Email</a>
+      </nav>
+    </footer>
+  </main>
+</div>
+<script src="../../switcher.js" defer></script>
+</body>
+</html>

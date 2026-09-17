@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ron Barrantes — Ledger</title>
+<meta name="description" content="Design concept 04: Ledger." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a class="name" href="index.html">Ron Barrantes</a>
+    <nav aria-label="Primary">
+      <a href="index.html" aria-current="page">Index</a>
+      <a href="writing.html">Writing</a>
+      <a href="index.html#about">About</a>
+      <a href="#">Projects</a>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+      <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h1>Software engineer. I keep notes in public.</h1>
+        <p>A decade of web applications, most of it spent maintaining things long after
+        launch. Interfaces, type systems, testing, and the decisions that decide whether a
+        codebase is pleasant to live in.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><span class="mono">Essays</span><b>24</b></div>
+        <div class="stat"><span class="mono">Since</span><b>2021</b></div>
+        <div class="stat"><span class="mono">Latest</span><b>Aug 26</b></div>
+      </div>
+    </div>
+
+    <section aria-labelledby="recent">
+      <div class="section-bar">
+        <span class="mono" id="recent">Recent entries</span>
+        <a class="mono" href="writing.html" style="color: var(--accent); text-decoration: none;">All 24 →</a>
+      </div>
+      <ol class="ledger">
+        <li><a href="post.html"><span class="d">2026·08·14</span><span class="t">The quiet cost of clever abstractions</span><span class="k">Engineering</span><span class="r">12 min</span></a></li>
+        <li><a href="post.html"><span class="d">2026·07·02</span><span class="t">Designing for the second read</span><span class="k">Craft</span><span class="r">8 min</span></a></li>
+        <li><a href="post.html"><span class="d">2026·05·19</span><span class="t">A year of typed everything</span><span class="k">TypeScript</span><span class="r">15 min</span></a></li>
+        <li><a href="post.html"><span class="d">2026·02·08</span><span class="t">Notes on running a team of two</span><span class="k">Teams</span><span class="r">6 min</span></a></li>
+        <li><a href="post.html"><span class="d">2025·11·30</span><span class="t">Why I stopped mocking the database</span><span class="k">Testing</span><span class="r">9 min</span></a></li>
+      </ol>
+    </section>
+
+    <section id="about" aria-labelledby="about-h">
+      <div class="section-bar"><span class="mono" id="about-h">About</span></div>
+      <p style="max-width: 36rem; color: var(--text-soft);">
+        I care a little too much about the seams: error messages, empty states, the shape of
+        a function signature. If something here is useful, wrong, or both, I&rsquo;d like to
+        hear about it — <a href="mailto:hello@ronb.co">hello@ronb.co</a>.
+      </p>
+    </section>
+    <footer class="foot">
+      <p>&copy; 2026 Ron Barrantes — San Antonio, TX</p>
+      <nav aria-label="Elsewhere">
+        <a href="#">GitHub</a><a href="#">Mastodon</a><a href="#">RSS</a><a href="mailto:hello@ronb.co">Email</a>
+      </nav>
+    </footer>
+  </div>
+</main>
+<script src="../../switcher.js" defer></script>
+</body>
+</html>

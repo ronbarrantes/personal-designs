@@ -1,8 +1,12 @@
 # Design concepts for ronb.co
 
-Three radically different directions for a personal site whose centre of gravity is the
-blog. Plain HTML and CSS, no build step, no framework. The only JavaScript is a ~30-line
-theme toggle (plus an optional reading-progress bar in concept 02).
+Five directions for a personal site whose centre of gravity is the blog. Plain HTML and
+CSS, no build step, no framework. The only JavaScript is a ~30-line theme toggle (plus a
+contents-tracker in concept 07).
+
+House rules for this round: no gradients, no glows, no soft-focus decoration; nothing
+centred — every layout is built on a left-aligned grid; and spacing is tight enough that a
+laptop screen shows real content rather than air.
 
 Open `index.html` for the gallery, or serve the folder:
 
@@ -10,13 +14,18 @@ Open `index.html` for the gallery, or serve the folder:
 python3 -m http.server 8000   # then http://localhost:8000
 ```
 
-## The three concepts
+## The five concepts
 
-| | Concept | Feel | Reading layout |
+| | Concept | Structure | Reading view |
 |---|---|---|---|
-| 01 | [Quiet Editorial](designs/01-quiet-editorial/) | Warm paper, serif display type, literary | Long serif measure, drop cap, hanging sidenotes |
-| 02 | [Soft Horizon](designs/02-soft-horizon/) | Airy, rounded, one soft gradient horizon, modern sans | Centred column, cards, reading-progress line |
-| 03 | [Index & Archive](designs/03-index-archive/) | Precise, hairlines, mono metadata, numbered archive | Sticky identity rail + one narrow serif column |
+| 03 | [Index](designs/03-index-archive/) | Sticky identity rail, one narrow column | Serif column, numbered section heads |
+| 04 | [Ledger](designs/04-ledger/) | Flat top bar, ruled four-column archive table | Body beside a sticky meta + contents column |
+| 05 | [Split](designs/05-split/) | Full-height panel pinned left, content stream right | Panel carries the article's context while you read |
+| 06 | [Broadsheet](designs/06-broadsheet/) | 12-column editorial grid, lead story + shorts | Seven-column body, sticky margin notes, drop cap |
+| 07 | [Workbench](designs/07-workbench/) | Three panes: nav rail, content, contents | Serif body with a contents pane that tracks your position |
+
+Concepts 03–05 are one family (03 is the original, tightened; 04 and 05 are variations on
+its skeleton). 06 and 07 are separate structures.
 
 Each folder is self-contained and has the same three pages:
 
@@ -28,10 +37,10 @@ Each folder is self-contained and has the same three pages:
 ## The switcher
 
 Every design page loads `switcher.js`, which injects a floating bar at the bottom of the
-screen: the left half jumps between the three concepts **keeping the page you are on**
+screen: the left half jumps between the five concepts **keeping the page you are on**
 (so you can compare the same article three ways), the right half moves between home,
 archive and article within the current concept. It adapts to light and dark, collapses to
-`01 / 02 / 03` on phones, and can be dismissed with the `×` (remembered for the tab).
+numbers on phones, and can be dismissed with the `×` (remembered for the tab).
 
 It is preview scaffolding, not part of any design — delete `switcher.js` and the single
 `<script src="../../switcher.js" defer>` tag in each page once you pick a direction.
@@ -55,8 +64,14 @@ tech.
 with the viewport instead of collapsing at one breakpoint. Measures stay in the 34–42rem
 range wherever there is prose.
 
-**Type.** Loaded from Google Fonts for the demo — 01 uses Fraunces + Newsreader, 02 uses
-Plus Jakarta Sans + Inter, 03 uses Inter + IBM Plex Mono + Source Serif 4. Self-host them
-(or swap in system stacks) before shipping.
+**Type.** Loaded from Google Fonts for the demo: Inter and IBM Plex Mono throughout, with
+Source Serif 4 for body copy in 03 and 07, and Instrument Serif for display in 06.
+Self-host them (or swap in system stacks) before shipping.
 
 All copy, post titles and dates are placeholder.
+
+## Earlier rounds
+
+The first round (`01-quiet-editorial`, warm paper and serif; `02-soft-horizon`, centred
+with a gradient) was cut. Both are still in git history if you ever want a look:
+`git show f2c4322..e271a57`.
