@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Design concepts for ronb.co</title>
-<meta name="description" content="Three design directions for a personal site built around a blog." />
+<meta name="description" content="Twenty-five original design directions for a blog-first personal website." />
 <meta name="color-scheme" content="light dark" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,13 +17,12 @@
 <div class="wrap">
   <header class="top">
     <div>
-      <h1>Five directions for ronb.co</h1>
+      <h1>Twenty-five directions for ronb.co</h1>
       <p class="lede">
-        Each concept is a complete little site: a home page, a blog archive and a sample
-        article, with light and dark modes. Open any one of them and a switcher bar at the
-        bottom of the screen flips between all five &mdash; keeping whichever page you are on,
-        so you can compare the same article straight across. No gradients, no glow, nothing
-        centred: every layout is built on a left-aligned grid.
+        A static inspiration gallery for a blog-first personal site. Each direction is a
+        self-contained mini-site with a home page, writing archive, sample article, responsive
+        CSS, light and dark modes, and a preview switcher for comparing the same page across
+        every visual system.
       </p>
     </div>
     <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
@@ -33,75 +32,36 @@
 
   <main id="main">
     <ul class="grid">
-      <li class="item">
-        <span class="num">03</span>
-        <div>
-          <h2><a href="designs/03-index-archive/index.html">Index</a></h2>
-          <p>Tightened version of the one you liked: sticky identity rail, one narrow column, hairlines and mono metadata. Same skeleton, ~40% less vertical space, denser archive rows and a shorter reading measure.</p>
-          <p class="links">
-            <a href="designs/03-index-archive/index.html">Home</a>
-            <a href="designs/03-index-archive/writing.html">Writing</a>
-            <a href="designs/03-index-archive/post.html">Article</a>
-          </p>
-        </div>
-      </li>
-
-      <li class="item">
-        <span class="num">04</span>
-        <div>
-          <h2><a href="designs/04-ledger/index.html">Ledger</a></h2>
-          <p>Same family, run as a record book. The rail is gone in favour of a flat top bar; the archive is a ruled four-column table (date, title, topic, length) and the article sits beside a sticky meta column with a numbered contents list.</p>
-          <p class="links">
-            <a href="designs/04-ledger/index.html">Home</a>
-            <a href="designs/04-ledger/writing.html">Writing</a>
-            <a href="designs/04-ledger/post.html">Article</a>
-          </p>
-        </div>
-      </li>
-
-      <li class="item">
-        <span class="num">05</span>
-        <div>
-          <h2><a href="designs/05-split/index.html">Split</a></h2>
-          <p>A full-height panel pinned to the left edge holds identity, navigation and the context for whatever you are reading; the content stream scrolls beside it. One hairline divider, flat panel colour, no page header at all.</p>
-          <p class="links">
-            <a href="designs/05-split/index.html">Home</a>
-            <a href="designs/05-split/writing.html">Writing</a>
-            <a href="designs/05-split/post.html">Article</a>
-          </p>
-        </div>
-      </li>
-
-      <li class="item">
-        <span class="num">06</span>
-        <div>
-          <h2><a href="designs/06-broadsheet/index.html">Broadsheet</a></h2>
-          <p>A twelve-column editorial grid, left-aligned and asymmetric: a lead story across seven columns, a stack of shorts beside it, then dense ruled rows. Sharp serif display against a sans body, black and white and one red.</p>
-          <p class="links">
-            <a href="designs/06-broadsheet/index.html">Home</a>
-            <a href="designs/06-broadsheet/writing.html">Writing</a>
-            <a href="designs/06-broadsheet/post.html">Article</a>
-          </p>
-        </div>
-      </li>
-
-      <li class="item">
-        <span class="num">07</span>
-        <div>
-          <h2><a href="designs/07-workbench/index.html">Workbench</a></h2>
-          <p>Three panes, edge to edge: a navigation rail with counts, the article, and a contents pane that tracks the section you are reading as you scroll. The densest of the five, and the best of them for a long post.</p>
-          <p class="links">
-            <a href="designs/07-workbench/index.html">Home</a>
-            <a href="designs/07-workbench/writing.html">Writing</a>
-            <a href="designs/07-workbench/post.html">Article</a>
-          </p>
-        </div>
-      </li>
+      <li class="item"><span class="num">03</span><div><h2><a href="designs/03-index-archive/index.html">Index</a></h2><p>Sticky identity rail, one narrow column, hairlines and mono metadata. Dense archive rows and a short reading measure.</p><p class="links"><a href="designs/03-index-archive/index.html">Home</a><a href="designs/03-index-archive/writing.html">Writing</a><a href="designs/03-index-archive/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">04</span><div><h2><a href="designs/04-ledger/index.html">Ledger</a></h2><p>A record-book system with a flat top bar, ruled archive table, and article view beside sticky meta and contents columns.</p><p class="links"><a href="designs/04-ledger/index.html">Home</a><a href="designs/04-ledger/writing.html">Writing</a><a href="designs/04-ledger/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">05</span><div><h2><a href="designs/05-split/index.html">Split</a></h2><p>A full-height left panel holds identity, navigation, and context while the content stream scrolls beside it.</p><p class="links"><a href="designs/05-split/index.html">Home</a><a href="designs/05-split/writing.html">Writing</a><a href="designs/05-split/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">06</span><div><h2><a href="designs/06-broadsheet/index.html">Broadsheet</a></h2><p>A twelve-column editorial grid with a lead story, stacked shorts, dense ruled rows, serif display, and restrained red accents.</p><p class="links"><a href="designs/06-broadsheet/index.html">Home</a><a href="designs/06-broadsheet/writing.html">Writing</a><a href="designs/06-broadsheet/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">07</span><div><h2><a href="designs/07-workbench/index.html">Workbench</a></h2><p>Three edge-to-edge panes: navigation rail, reading pane, and contents pane that tracks article sections as you scroll.</p><p class="links"><a href="designs/07-workbench/index.html">Home</a><a href="designs/07-workbench/writing.html">Writing</a><a href="designs/07-workbench/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">08</span><div><h2><a href="designs/08-marginalia-map/index.html">Marginalia Map</a></h2><p>A cartographic knowledge garden with margin routes, plotted notes, field-map surfaces, and coordinate-like metadata.</p><p class="links"><a href="designs/08-marginalia-map/index.html">Home</a><a href="designs/08-marginalia-map/writing.html">Writing</a><a href="designs/08-marginalia-map/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">09</span><div><h2><a href="designs/09-receipt-zine/index.html">Receipt Zine</a></h2><p>A stapled personal zine built from receipt columns, stamped notes, rotated scraps, and loud mono headings.</p><p class="links"><a href="designs/09-receipt-zine/index.html">Home</a><a href="designs/09-receipt-zine/writing.html">Writing</a><a href="designs/09-receipt-zine/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">10</span><div><h2><a href="designs/10-quiet-dossier/index.html">Quiet Dossier</a></h2><p>Brutalist restraint: confidential file blocks, heavy rules, redactions, and a sober case-note archive.</p><p class="links"><a href="designs/10-quiet-dossier/index.html">Home</a><a href="designs/10-quiet-dossier/writing.html">Writing</a><a href="designs/10-quiet-dossier/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">11</span><div><h2><a href="designs/11-alpine-grid/index.html">Alpine Grid</a></h2><p>A Swiss poster system with strict columns, oversized numbers, primary accents, and disciplined hierarchy.</p><p class="links"><a href="designs/11-alpine-grid/index.html">Home</a><a href="designs/11-alpine-grid/writing.html">Writing</a><a href="designs/11-alpine-grid/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">12</span><div><h2><a href="designs/12-constellation-notes/index.html">Constellation Notes</a></h2><p>A night-sky archive where essays orbit as nodes, with luminous lines and compact article cards.</p><p class="links"><a href="designs/12-constellation-notes/index.html">Home</a><a href="designs/12-constellation-notes/writing.html">Writing</a><a href="designs/12-constellation-notes/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">13</span><div><h2><a href="designs/13-index-cards/index.html">Index Cards</a></h2><p>A desktop of clipped index cards, accession numbers, rubber-stamp metadata, and cross-reference shelves.</p><p class="links"><a href="designs/13-index-cards/index.html">Home</a><a href="designs/13-index-cards/writing.html">Writing</a><a href="designs/13-index-cards/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">14</span><div><h2><a href="designs/14-terminal-garden/index.html">Terminal Garden</a></h2><p>A command-line knowledge garden softened by botanical tags, log streams, and green monochrome rhythm.</p><p class="links"><a href="designs/14-terminal-garden/index.html">Home</a><a href="designs/14-terminal-garden/writing.html">Writing</a><a href="designs/14-terminal-garden/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">15</span><div><h2><a href="designs/15-museum-labels/index.html">Museum Labels</a></h2><p>A spare exhibition catalog with object labels, accession plates, generous white space, and curatorial prose.</p><p class="links"><a href="designs/15-museum-labels/index.html">Home</a><a href="designs/15-museum-labels/writing.html">Writing</a><a href="designs/15-museum-labels/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">16</span><div><h2><a href="designs/16-radio-log/index.html">Radio Log</a></h2><p>A broadcast-desk interface with frequency strips, signal meters, transcript blocks, and precise timestamps.</p><p class="links"><a href="designs/16-radio-log/index.html">Home</a><a href="designs/16-radio-log/writing.html">Writing</a><a href="designs/16-radio-log/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">17</span><div><h2><a href="designs/17-hypertext-lab/index.html">Hypertext Lab</a></h2><p>Experimental browser-native hypertext with link clouds, exposed anchors, asymmetrical fragments, and electric accents.</p><p class="links"><a href="designs/17-hypertext-lab/index.html">Home</a><a href="designs/17-hypertext-lab/writing.html">Writing</a><a href="designs/17-hypertext-lab/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">18</span><div><h2><a href="designs/18-notebook-risograph/index.html">Notebook Riso</a></h2><p>A two-ink notebook with ruled paper, riso texture, handout boxes, and informal research notes.</p><p class="links"><a href="designs/18-notebook-risograph/index.html">Home</a><a href="designs/18-notebook-risograph/writing.html">Writing</a><a href="designs/18-notebook-risograph/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">19</span><div><h2><a href="designs/19-cinema-index/index.html">Cinema Index</a></h2><p>A film-program archive with widescreen frames, captions, scene slugs, and dramatic editorial pacing.</p><p class="links"><a href="designs/19-cinema-index/index.html">Home</a><a href="designs/19-cinema-index/writing.html">Writing</a><a href="designs/19-cinema-index/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">20</span><div><h2><a href="designs/20-legal-pad/index.html">Legal Pad</a></h2><p>A yellow-pad personal site with ruled sections, sidebar objections, footnotes, and handwritten-feeling structure.</p><p class="links"><a href="designs/20-legal-pad/index.html">Home</a><a href="designs/20-legal-pad/writing.html">Writing</a><a href="designs/20-legal-pad/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">21</span><div><h2><a href="designs/21-data-atlas/index.html">Data Atlas</a></h2><p>A quantified-self atlas with charts, tabular essays, tiny maps, and analytic navigation.</p><p class="links"><a href="designs/21-data-atlas/index.html">Home</a><a href="designs/21-data-atlas/writing.html">Writing</a><a href="designs/21-data-atlas/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">22</span><div><h2><a href="designs/22-type-specimen/index.html">Type Specimen</a></h2><p>A typography-first portfolio that treats posts as specimen pages, glyph sets, and measured scales.</p><p class="links"><a href="designs/22-type-specimen/index.html">Home</a><a href="designs/22-type-specimen/writing.html">Writing</a><a href="designs/22-type-specimen/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">23</span><div><h2><a href="designs/23-attic-archive/index.html">Attic Archive</a></h2><p>A warm archival cabinet with folders, labels, shelf marks, and personal-history entries.</p><p class="links"><a href="designs/23-attic-archive/index.html">Home</a><a href="designs/23-attic-archive/writing.html">Writing</a><a href="designs/23-attic-archive/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">24</span><div><h2><a href="designs/24-field-station/index.html">Field Station</a></h2><p>Outdoor research notes with coordinates, specimens, weather chips, and compact field reports.</p><p class="links"><a href="designs/24-field-station/index.html">Home</a><a href="designs/24-field-station/writing.html">Writing</a><a href="designs/24-field-station/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">25</span><div><h2><a href="designs/25-pixel-bureau/index.html">Pixel Bureau</a></h2><p>A low-resolution office system with bitmap borders, small windows, and desktop filing metaphors.</p><p class="links"><a href="designs/25-pixel-bureau/index.html">Home</a><a href="designs/25-pixel-bureau/writing.html">Writing</a><a href="designs/25-pixel-bureau/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">26</span><div><h2><a href="designs/26-calendar-wall/index.html">Calendar Wall</a></h2><p>A year-wall layout that makes writing feel scheduled, seasonal, and browsable by time blocks.</p><p class="links"><a href="designs/26-calendar-wall/index.html">Home</a><a href="designs/26-calendar-wall/writing.html">Writing</a><a href="designs/26-calendar-wall/post.html">Article</a></p></div></li>
+      <li class="item"><span class="num">27</span><div><h2><a href="designs/27-signal-noise/index.html">Signal Noise</a></h2><p>An experimental signal-processing site with scanlines, waveform sections, and fractured reading modules.</p><p class="links"><a href="designs/27-signal-noise/index.html">Home</a><a href="designs/27-signal-noise/writing.html">Writing</a><a href="designs/27-signal-noise/post.html">Article</a></p></div></li>
     </ul>
   </main>
 
   <footer>
-    <p>Sample copy is placeholder. Each design folder is self-contained — copy one out and wire it to your content. The switcher bar is preview-only: delete <code>switcher.js</code> and the one script tag per page when you pick a direction.</p>
+    <p>All directions are original static HTML/CSS explorations. The research references were used only as broad pattern input; no site, code, copy, assets, or identity was copied. Delete <code>switcher.js</code> and the one preview script tag per page after choosing a direction.</p>
   </footer>
 </div>
 <style>.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}</style>

@@ -1,6 +1,6 @@
 /* ============================================================
    Design preview switcher.
-   Injects a floating bar that jumps between the three concepts
+   Injects a floating bar that jumps between the design concepts
    (keeping whichever page you are on) and between the pages of
    the current concept. Preview-only — delete this file and the
    one <script> tag per page when a direction is chosen.
@@ -11,7 +11,27 @@
     { slug: "04-ledger",        num: "04", name: "Ledger" },
     { slug: "05-split",         num: "05", name: "Split" },
     { slug: "06-broadsheet",    num: "06", name: "Broadsheet" },
-    { slug: "07-workbench",     num: "07", name: "Workbench" }
+    { slug: "07-workbench",     num: "07", name: "Workbench" },
+    { slug: "08-marginalia-map", num: "08", name: "Marginalia Map" },
+    { slug: "09-receipt-zine", num: "09", name: "Receipt Zine" },
+    { slug: "10-quiet-dossier", num: "10", name: "Quiet Dossier" },
+    { slug: "11-alpine-grid", num: "11", name: "Alpine Grid" },
+    { slug: "12-constellation-notes", num: "12", name: "Constellation Notes" },
+    { slug: "13-index-cards", num: "13", name: "Index Cards" },
+    { slug: "14-terminal-garden", num: "14", name: "Terminal Garden" },
+    { slug: "15-museum-labels", num: "15", name: "Museum Labels" },
+    { slug: "16-radio-log", num: "16", name: "Radio Log" },
+    { slug: "17-hypertext-lab", num: "17", name: "Hypertext Lab" },
+    { slug: "18-notebook-risograph", num: "18", name: "Notebook Riso" },
+    { slug: "19-cinema-index", num: "19", name: "Cinema Index" },
+    { slug: "20-legal-pad", num: "20", name: "Legal Pad" },
+    { slug: "21-data-atlas", num: "21", name: "Data Atlas" },
+    { slug: "22-type-specimen", num: "22", name: "Type Specimen" },
+    { slug: "23-attic-archive", num: "23", name: "Attic Archive" },
+    { slug: "24-field-station", num: "24", name: "Field Station" },
+    { slug: "25-pixel-bureau", num: "25", name: "Pixel Bureau" },
+    { slug: "26-calendar-wall", num: "26", name: "Calendar Wall" },
+    { slug: "27-signal-noise", num: "27", name: "Signal Noise" }
   ];
   var PAGES = [
     { file: "index.html",   name: "Home" },
