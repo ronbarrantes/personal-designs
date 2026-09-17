@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Writing — Ron Barrantes</title>
+<meta name="description" content="Design concept 02: the blog archive." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span> Ron Barrantes</a>
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="writing.html" aria-current="page">Writing</a>
+      <a href="index.html#about">About</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="shell">
+    <section class="hero" style="padding-bottom: 2rem;">
+      <h1>Writing</h1>
+      <p>Twenty-four essays on engineering and craft. Nothing here is a hot take &mdash; most of it sat for a month before it went up.</p>
+      <div class="actions" role="group" aria-label="Filter by topic">
+        <a class="btn btn-primary" href="#" aria-current="true">All</a>
+        <a class="btn btn-ghost" href="#">Engineering</a>
+        <a class="btn btn-ghost" href="#">Craft</a>
+        <a class="btn btn-ghost" href="#">Teams</a>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 3rem;" aria-labelledby="y2026">
+      <div class="section-head"><h2 id="y2026">2026</h2></div>
+      <ul class="posts">
+        <li class="card">
+          <p class="card-meta"><span class="chip">Engineering</span><time datetime="2026-08-14">14 Aug</time><span aria-hidden="true">·</span><span>12 min</span></p>
+          <h3><a href="post.html">The quiet cost of clever abstractions</a></h3>
+          <p>Every indirection you add is a tax someone pays at 2am. A short case for writing the boring version first.</p>
+        </li>
+        <li class="card">
+          <p class="card-meta"><span class="chip">Craft</span><time datetime="2026-07-02">2 Jul</time><span aria-hidden="true">·</span><span>8 min</span></p>
+          <h3><a href="post.html">Designing for the second read</a></h3>
+          <p>Most code is read far more often than it is written. What changes when you optimise for the reader?</p>
+        </li>
+        <li class="card">
+          <p class="card-meta"><span class="chip">TypeScript</span><time datetime="2026-05-19">19 May</time><span aria-hidden="true">·</span><span>15 min</span></p>
+          <h3><a href="post.html">A year of typed everything</a></h3>
+          <p>Where strict types carry real weight, and where they are ceremony with a compiler attached.</p>
+        </li>
+        <li class="card">
+          <p class="card-meta"><span class="chip">Teams</span><time datetime="2026-02-08">8 Feb</time><span aria-hidden="true">·</span><span>6 min</span></p>
+          <h3><a href="post.html">Notes on running a team of two</a></h3>
+          <p>The smallest org chart still has politics. Things I got wrong in the first six months.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" style="padding-top: 0;" aria-labelledby="y2025">
+      <div class="section-head"><h2 id="y2025">2025</h2></div>
+      <ul class="posts">
+        <li class="card">
+          <p class="card-meta"><span class="chip">Testing</span><time datetime="2025-11-30">30 Nov</time><span aria-hidden="true">·</span><span>9 min</span></p>
+          <h3><a href="post.html">Why I stopped mocking the database</a></h3>
+          <p>Test doubles promised speed and delivered a second implementation to maintain.</p>
+        </li>
+        <li class="card">
+          <p class="card-meta"><span class="chip">Design</span><time datetime="2025-09-12">12 Sep</time><span aria-hidden="true">·</span><span>5 min</span></p>
+          <h3><a href="post.html">The empty state is the product</a></h3>
+          <p>Nobody designs the screen every new user sees first. It shows.</p>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Ron Barrantes</p>
+      <nav aria-label="Elsewhere">
+        <a href="#">GitHub</a>
+        <a href="#">Mastodon</a>
+        <a href="#">RSS</a>
+        <a href="mailto:hello@ronb.co">Email</a>
+      </nav>
+    </footer>
+  </div>
+</main>
+</body>
+</html>

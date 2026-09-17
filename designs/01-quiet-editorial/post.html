@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The quiet cost of clever abstractions — Ron Barrantes</title>
+<meta name="description" content="Design concept 01: a sample article, showing the full reading layout." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="shell">
+  <header class="masthead">
+    <a class="wordmark" href="index.html">Ron Barrantes<span class="dot">.</span></a>
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="writing.html" aria-current="page">Writing</a>
+      <a href="index.html#about">About</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article class="article">
+      <header class="article-header">
+        <p class="eyebrow">Engineering</p>
+        <h1>The quiet cost of clever abstractions</h1>
+        <p class="article-meta">
+          <time datetime="2026-08-14">14 August 2026</time>
+          <span class="sep" aria-hidden="true">/</span>
+          <span>12 minute read</span>
+        </p>
+      </header>
+
+      <div class="prose">
+        <p>
+          There is a particular kind of pull request that feels wonderful to write and
+          terrible to inherit. It collapses six similar functions into one configurable
+          engine. It removes ninety lines. The diff is green in all the right places, and
+          every reviewer leaves a small celebratory emoji.
+        </p>
+
+        <p>
+          Eighteen months later, someone is reading that engine at two in the morning,
+          trying to work out why a single customer&rsquo;s invoice renders with the wrong
+          currency, and the answer lives four layers down in a branch that only fires when
+          two configuration flags disagree.
+        </p>
+
+        <aside class="sidenote">
+          The six duplicated functions would have been six greppable places to look. The
+          abstraction turned them into one place you cannot read.
+        </aside>
+
+        <h2>Duplication is cheaper than the wrong shape</h2>
+
+        <p>
+          The instinct to remove repetition is a good one, and it is also the most
+          commonly misapplied rule in our field. Repetition is visible; the wrong
+          abstraction is invisible until it fails. When you merge two things that merely
+          <em>look</em> alike, you have not removed complexity — you have hidden the fact
+          that they were never the same thing.
+        </p>
+
+        <blockquote>
+          Prefer duplication over the wrong abstraction. It is far easier to fan a
+          function back out than to untangle one that grew a personality.
+        </blockquote>
+
+        <p>
+          My working rule is to wait for the third occurrence, and then to look at the
+          reasons rather than the shapes. Two pieces of code that change for the same
+          reason belong together. Two that happen to have the same five lines today do not.
+        </p>
+
+        <h2>A test you can run in your head</h2>
+
+        <p>
+          Before extracting anything, I try to answer one question out loud: if the
+          requirement changed for exactly one caller, how much of this would I have to
+          undo? If the honest answer involves a new boolean parameter, the abstraction is
+          already failing, and it has not even shipped yet.
+        </p>
+
+        <pre><code>// The boring version. It fits on a screen.
+function invoiceTotal(lines, taxRate) {
+  const subtotal = lines.reduce((sum, l) =&gt; sum + l.amount, 0);
+  return subtotal + subtotal * taxRate;
+}</code></pre>
+
+        <aside class="sidenote">
+          Boring code has a useful property: you can hold all of it in your head at once,
+          which is the only kind of verification that happens at 2am.
+        </aside>
+
+        <h3>What to do instead</h3>
+
+        <ul>
+          <li>Write the direct version first, even if it repeats.</li>
+          <li>Name the reason two things are the same, not the syntax.</li>
+          <li>Let the third example tell you the real shape.</li>
+          <li>When you do abstract, make the seams easy to cut again.</li>
+        </ul>
+
+        <p>
+          None of this is an argument for sloppiness. It is an argument for paying the
+          cost of an abstraction only once you know what you are buying — and for
+          remembering that the person who pays it is usually not the person who wrote it.
+        </p>
+      </div>
+    </article>
+
+    <section class="next-up" aria-labelledby="next">
+      <p class="eyebrow" id="next">Next</p>
+      <h2><a href="post.html">Designing for the second read</a></h2>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Ron Barrantes</p>
+    <nav aria-label="Elsewhere">
+      <a href="#">GitHub</a>
+      <a href="#">Mastodon</a>
+      <a href="#">RSS</a>
+      <a href="mailto:hello@ronb.co">Email</a>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Writing — Ron Barrantes</title>
+<meta name="description" content="Design concept 03: the blog archive." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="layout">
+  <header class="rail">
+    <div class="identity">
+      <a class="name" href="index.html" style="display:block; font-weight:600;">Ron Barrantes</a>
+      <p>Software engineer. San&nbsp;Antonio, Texas.</p>
+    </div>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Index</a></li>
+        <li><a href="writing.html" aria-current="page">Writing</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+    </nav>
+
+    <p class="status">24 essays, 2021&ndash;2026. Longest first draft: eleven months.</p>
+
+    <div class="elsewhere">
+      <a href="#">GitHub</a>
+      <a href="#">Mastodon</a>
+      <a href="#">RSS</a>
+      <a href="mailto:hello@ronb.co">Email</a>
+    </div>
+
+    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+      <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+    </button>
+  </header>
+
+  <main class="content" id="main">
+    <section class="intro" style="padding-bottom: 3.5rem;">
+      <span class="mono">Archive</span>
+      <h2>Writing</h2>
+      <p>Newest first. Nothing here is a hot take; most of it sat for a month before it went up.</p>
+    </section>
+
+    <section class="block" aria-labelledby="y2026">
+      <span class="mono" id="y2026">2026</span>
+      <ol class="archive">
+        <li><a href="post.html"><span class="num">01</span><span class="title">The quiet cost of clever abstractions</span><time datetime="2026-08-14">08 · 14</time><span class="desc">Every indirection is a tax someone pays at 2am.</span></a></li>
+        <li><a href="post.html"><span class="num">02</span><span class="title">Designing for the second read</span><time datetime="2026-07-02">07 · 02</time><span class="desc">Optimising code for the reader instead of the author.</span></a></li>
+        <li><a href="post.html"><span class="num">03</span><span class="title">A year of typed everything</span><time datetime="2026-05-19">05 · 19</time><span class="desc">Where strict types earn their keep, and where they don&rsquo;t.</span></a></li>
+        <li><a href="post.html"><span class="num">04</span><span class="title">Notes on running a team of two</span><time datetime="2026-02-08">02 · 08</time><span class="desc">The smallest org chart still has politics.</span></a></li>
+      </ol>
+    </section>
+
+    <section class="block" aria-labelledby="y2025">
+      <span class="mono" id="y2025">2025</span>
+      <ol class="archive">
+        <li><a href="post.html"><span class="num">05</span><span class="title">Why I stopped mocking the database</span><time datetime="2025-11-30">11 · 30</time><span class="desc">Test doubles promised speed and delivered a second implementation.</span></a></li>
+        <li><a href="post.html"><span class="num">06</span><span class="title">The empty state is the product</span><time datetime="2025-09-12">09 · 12</time><span class="desc">Nobody designs the first screen a new user sees. It shows.</span></a></li>
+        <li><a href="post.html"><span class="num">07</span><span class="title">Six months without a staging environment</span><time datetime="2025-04-21">04 · 21</time><span class="desc">What broke, what didn&rsquo;t, and what I&rsquo;d keep.</span></a></li>
+      </ol>
+    </section>
+  </main>
+</div>
+</body>
+</html>

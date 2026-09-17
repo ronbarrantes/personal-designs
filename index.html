@@ -1,42 +1,93 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A tiny space for personal design experiments." />
-    <title>Personal Designs ✦</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <main class="shell">
-      <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow">a little corner for experiments ✦</p>
-        <h1 id="page-title">Make something lovely.</h1>
-        <p class="intro">A simple home for your design ideas, tiny prototypes, and things worth seeing.</p>
-        <a class="button" href="#todo">Start with one small thing <span aria-hidden="true">→</span></a>
-      </section>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Design concepts for ronb.co</title>
+<meta name="description" content="Three design directions for a personal site built around a blog." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="gallery.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Three directions for ronb.co</h1>
+      <p class="lede">
+        Each concept is a complete little site: a home page, a blog archive and a sample
+        article, with light and dark modes. Plain HTML and CSS, one small script for the
+        theme toggle.
+      </p>
+    </div>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+      <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+    </button>
+  </header>
 
-      <section class="todo-card" id="todo" aria-labelledby="todo-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">today's tiny list</p>
-            <h2 id="todo-title">Design practice</h2>
-          </div>
-          <span class="sparkle" aria-hidden="true">✦</span>
+  <main id="main">
+    <ul class="grid">
+      <li class="item">
+        <span class="num">01</span>
+        <div>
+          <h2><a href="designs/01-quiet-editorial/index.html">Quiet Editorial</a></h2>
+          <p>
+            Warm paper, serif display type and a long measure. Articles get a drop cap and
+            a hanging margin for sidenotes — closest to a literary magazine, built for
+            people who actually read to the end.
+          </p>
+          <p class="links">
+            <a href="designs/01-quiet-editorial/index.html">Home</a>
+            <a href="designs/01-quiet-editorial/writing.html">Writing</a>
+            <a href="designs/01-quiet-editorial/post.html">Article</a>
+          </p>
         </div>
-        <form class="todo-form" id="todo-form">
-          <label class="sr-only" for="todo-input">Add a design task</label>
-          <input id="todo-input" name="task" type="text" placeholder="Add a small idea..." autocomplete="off" />
-          <button class="button button-small" type="submit">Add</button>
-        </form>
-        <ul class="todo-list" id="todo-list" aria-live="polite"></ul>
-      </section>
+      </li>
 
-      <footer>Built one small step at a time. <span aria-hidden="true">♡</span></footer>
-    </main>
-  </body>
+      <li class="item">
+        <span class="num">02</span>
+        <div>
+          <h2><a href="designs/02-soft-horizon/index.html">Soft Horizon</a></h2>
+          <p>
+            Centred, airy and rounded, with one soft gradient behind the top of the page and
+            gentle card depth below it. Sans-serif throughout, a sticky translucent nav and
+            a reading-progress line on articles.
+          </p>
+          <p class="links">
+            <a href="designs/02-soft-horizon/index.html">Home</a>
+            <a href="designs/02-soft-horizon/writing.html">Writing</a>
+            <a href="designs/02-soft-horizon/post.html">Article</a>
+          </p>
+        </div>
+      </li>
+
+      <li class="item">
+        <span class="num">03</span>
+        <div>
+          <h2><a href="designs/03-index-archive/index.html">Index &amp; Archive</a></h2>
+          <p>
+            A sticky identity rail on the left, one narrow column of content on the right.
+            Hairlines, mono metadata and a numbered archive; article text is set in a serif
+            for reading comfort. Precise rather than loud.
+          </p>
+          <p class="links">
+            <a href="designs/03-index-archive/index.html">Home</a>
+            <a href="designs/03-index-archive/writing.html">Writing</a>
+            <a href="designs/03-index-archive/post.html">Article</a>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>Sample copy is placeholder. Each design folder is self-contained — copy one out and wire it to your content.</p>
+  </footer>
+</div>
+<style>.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}</style>
+</body>
 </html>

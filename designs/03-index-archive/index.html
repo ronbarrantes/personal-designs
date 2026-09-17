@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ron Barrantes — Index &amp; Archive</title>
+<meta name="description" content="Design concept 03: a precise two-column index built around an archive of writing." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="layout">
+  <header class="rail">
+    <div class="identity">
+      <h1 class="name">Ron Barrantes</h1>
+      <p>Software engineer. San&nbsp;Antonio, Texas.</p>
+    </div>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Index</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+    </nav>
+
+    <p class="status">
+      Currently building developer tools, and writing about the parts of the job that
+      don&rsquo;t fit in a changelog.
+    </p>
+
+    <div class="elsewhere">
+      <a href="#">GitHub</a>
+      <a href="#">Mastodon</a>
+      <a href="#">RSS</a>
+      <a href="mailto:hello@ronb.co">Email</a>
+    </div>
+
+    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+      <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+    </button>
+  </header>
+
+  <main class="content" id="main">
+    <section class="intro">
+      <span class="mono">Index — 2026</span>
+      <h2>
+        I write software for a living and essays about it for
+        <span class="accent">everything else</span>.
+      </h2>
+      <p>
+        A decade of building web applications, most of it spent maintaining things long
+        after the launch. What I have left over goes here: notes on interfaces, type
+        systems, testing, and the small decisions that decide whether a codebase is
+        pleasant to live in.
+      </p>
+    </section>
+
+    <section class="block" aria-labelledby="recent">
+      <span class="mono" id="recent">Recent writing</span>
+      <ol class="archive">
+        <li>
+          <a href="post.html">
+            <span class="num">01</span>
+            <span class="title">The quiet cost of clever abstractions</span>
+            <time datetime="2026-08-14">2026 · 08</time>
+            <span class="desc">Every indirection is a tax someone pays at 2am.</span>
+          </a>
+        </li>
+        <li>
+          <a href="post.html">
+            <span class="num">02</span>
+            <span class="title">Designing for the second read</span>
+            <time datetime="2026-07-02">2026 · 07</time>
+            <span class="desc">Optimising code for the reader instead of the author.</span>
+          </a>
+        </li>
+        <li>
+          <a href="post.html">
+            <span class="num">03</span>
+            <span class="title">A year of typed everything</span>
+            <time datetime="2026-05-19">2026 · 05</time>
+            <span class="desc">Where strict types earn their keep, and where they don&rsquo;t.</span>
+          </a>
+        </li>
+        <li>
+          <a href="post.html">
+            <span class="num">04</span>
+            <span class="title">Notes on running a team of two</span>
+            <time datetime="2026-02-08">2026 · 02</time>
+            <span class="desc">The smallest org chart still has politics.</span>
+          </a>
+        </li>
+      </ol>
+      <p style="margin-top: 1.5rem;"><a href="writing.html" class="mono" style="color: var(--accent); text-decoration: none;">View all 24 &rarr;</a></p>
+    </section>
+
+    <section class="block" id="about" aria-labelledby="about-head">
+      <span class="mono" id="about-head">About</span>
+      <p style="color: var(--text-soft);">
+        I care a little too much about the seams: error messages, empty states, the shape
+        of a function signature. If something here is useful, wrong, or both, I&rsquo;d like
+        to hear about it &mdash; <a href="mailto:hello@ronb.co">hello@ronb.co</a>.
+      </p>
+    </section>
+  </main>
+</div>
+</body>
+</html>

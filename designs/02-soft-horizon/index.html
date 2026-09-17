@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ron Barrantes — Soft Horizon</title>
+<meta name="description" content="Design concept 02: a light, airy, modern personal site built around writing." />
+<meta name="color-scheme" content="light dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span> Ron Barrantes</a>
+    <nav aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="writing.html">Writing</a>
+      <a href="#about">About</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span data-theme-label>Dark</span><span class="visually-hidden"> mode</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="shell">
+    <section class="hero">
+      <p class="pill"><span class="dot" aria-hidden="true"></span> Available for interesting problems</p>
+      <h1>Software engineer, and a <span class="grad">stubborn writer</span> about the craft.</h1>
+      <p>
+        I build web products and write essays about the decisions behind them —
+        interfaces, type systems, and the long tail of maintenance nobody puts on a slide.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="writing.html">Read the blog</a>
+        <a class="btn btn-ghost" href="#about">More about me</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="latest">
+      <div class="section-head">
+        <h2 id="latest">Latest writing</h2>
+        <a href="writing.html">All 24 posts &rarr;</a>
+      </div>
+      <ul class="posts">
+        <li class="card">
+          <p class="card-meta">
+            <span class="chip">Engineering</span>
+            <time datetime="2026-08-14">14 Aug 2026</time>
+            <span aria-hidden="true">·</span>
+            <span>12 min read</span>
+          </p>
+          <h3><a href="post.html">The quiet cost of clever abstractions</a></h3>
+          <p>Every indirection you add is a tax someone pays at 2am. A short case for writing the boring version first, and waiting for the third example.</p>
+        </li>
+        <li class="card">
+          <p class="card-meta">
+            <span class="chip">Craft</span>
+            <time datetime="2026-07-02">2 Jul 2026</time>
+            <span aria-hidden="true">·</span>
+            <span>8 min read</span>
+          </p>
+          <h3><a href="post.html">Designing for the second read</a></h3>
+          <p>Most code is read far more often than it is written. What changes when you optimise for the reader instead of the author?</p>
+        </li>
+        <li class="card">
+          <p class="card-meta">
+            <span class="chip">TypeScript</span>
+            <time datetime="2026-05-19">19 May 2026</time>
+            <span aria-hidden="true">·</span>
+            <span>15 min read</span>
+          </p>
+          <h3><a href="post.html">A year of typed everything</a></h3>
+          <p>Twelve months of strict mode taught me where types carry real weight, and where they are just ceremony with a compiler attached.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-head">
+      <div class="section-head"><h2 id="about-head">About</h2></div>
+      <div style="max-width: 40rem;">
+        <p style="color: var(--text-soft); font-size: 1.125rem;">
+          I&rsquo;m a software engineer in San Antonio. I&rsquo;ve spent the last decade building
+          web applications, and most of what I know came from maintaining something long
+          after the launch party ended.
+        </p>
+        <p style="color: var(--text-soft);">
+          These days I care most about the seams — error messages, empty states, and the
+          shape of a function signature. This site is where I think out loud about them.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="sub-head">
+      <div class="subscribe">
+        <h2 id="sub-head">A letter, roughly monthly</h2>
+        <p>New essays, plus the two or three things I read that changed my mind. No tracking, no cadence guilt, one-click unsubscribe.</p>
+        <form onsubmit="event.preventDefault(); this.reset();">
+          <label class="visually-hidden" for="email">Email address</label>
+          <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Ron Barrantes</p>
+      <nav aria-label="Elsewhere">
+        <a href="#">GitHub</a>
+        <a href="#">Mastodon</a>
+        <a href="#">RSS</a>
+        <a href="mailto:hello@ronb.co">Email</a>
+      </nav>
+    </footer>
+  </div>
+</main>
+</body>
+</html>
